@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import { memo, useRef } from 'react'
 
 interface Props{
      address: string;
 }
-export const SecondFoo = ({ address }: Props) => {
+const SecondFoo = ({ address }: Props) => {
     const renderCounter = useRef<number>(0);
     renderCounter.current = renderCounter.current+1;
   return (
@@ -13,3 +13,6 @@ export const SecondFoo = ({ address }: Props) => {
     </div>
   )
 }
+
+
+export const SecondFooMemorized = memo(SecondFoo)

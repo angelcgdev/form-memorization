@@ -22,5 +22,5 @@ export const useForm = (initValue = defaultValue)=>{
         setForm(defaultValue);
     }
 
-    return { form, handleChange, restoreDefault, defaultValue };
+    return { form, handleChange, restoreDefault, defaultValue, reset };
 }

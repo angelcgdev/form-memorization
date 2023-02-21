@@ -20,7 +20,7 @@ export const Form = () => {
             placeholder='Jhon'
             type="text"
             name="name"
-            value={form['name']}
+            value={form['name']??''}
             onChange={handleChange}
           />
         </label>
@@ -31,13 +31,13 @@ export const Form = () => {
             placeholder='av. los sauces'
             type="text"
             name="address"
-            value={form['address']}
+            value={form['address']??''}
             onChange={handleChange}
           />
         </label>
         <button
           type="submit"
-          className="shadow bg-slate-800 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          className="shadow bg-slate-800 hover:bg-slate-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
         >
           Submit
         </button>
